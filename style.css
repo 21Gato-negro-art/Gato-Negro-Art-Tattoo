@@ -1,0 +1,12 @@
+:root{--black:#101010;--cream:#f2e8d5;--red:#a52b35;--gold:#c99b55}
+*{box-sizing:border-box}body{margin:0;background:var(--black);color:var(--cream);font-family:Arial,sans-serif;line-height:1.6}
+header{display:flex;justify-content:space-between;align-items:center;padding:24px 7%;position:absolute;width:100%;z-index:2}
+.brand{color:var(--cream);font-weight:bold;letter-spacing:3px;text-decoration:none}
+button{background:var(--gold);border:0;padding:9px 14px;font-weight:bold;cursor:pointer}
+.hero{min-height:90vh;padding:180px 7% 80px;display:flex;align-items:center;background:linear-gradient(90deg,#101010dd,#10101055),url("https://images.unsplash.com/photo-1542727365-19732a80dcfd?auto=format&fit=crop&w=1800&q=85") center/cover}
+.hero div{max-width:650px}.eyebrow{color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:.8rem}
+h1{font-size:clamp(3rem,8vw,6rem);line-height:1;margin:20px 0}
+h2{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1}.button{display:inline-block;background:var(--red);color:white;padding:14px 22px;margin-top:20px;text-decoration:none;font-weight:bold}
+.about,.contact{max-width:850px;margin:auto;padding:90px 7%}.styles{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.styles span{border:1px solid var(--gold);padding:8px 13px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 7%}.gallery img{width:100%;height:360px;object-fit:cover}.contact a{color:var(--gold);display:block;margin:12px 0}footer{text-align:center;padding:35px;border-top:1px solid #333}
+@media(max-width:700px){.gallery{grid-template-columns:1fr}.gallery img{height:300px}}
