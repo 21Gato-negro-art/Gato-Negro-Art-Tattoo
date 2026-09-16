@@ -1,55 +1,254 @@
-:root{--black:#101010;--cream:#f2e8d5;--red:#a52b35;--gold:#c99b55}
-*{box-sizing:border-box}body{margin:0;background:var(--black);color:var(--cream);font-family:Arial,sans-serif;line-height:1.6}
-header{display:flex;justify-content:space-between;align-items:center;padding:24px 7%;position:absolute;width:100%;z-index:2}
-.brand{color:var(--cream);font-weight:bold;letter-spacing:3px;text-decoration:none}
-button{background:var(--gold);border:0;padding:9px 14px;font-weight:bold;cursor:pointer}
-.hero{min-height:90vh;padding:180px 7% 80px;display:flex;align-items:center;background:linear-gradient(90deg,#101010dd,#10101055),url("https://images.unsplash.com/photo-1542727365-19732a80dcfd?auto=format&fit=crop&w=1800&q=85") center/cover}
-.hero div{max-width:650px}.eyebrow{color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:.8rem}
-h1{font-size:clamp(3rem,8vw,6rem);line-height:1;margin:20px 0}
-h2{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1}.button{display:inline-block;background:var(--red);color:white;padding:14px 22px;margin-top:20px;text-decoration:none;font-weight:bold}
-.about,.contact{max-width:850px;margin:auto;padding:90px 7%}.styles{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.styles span{border:1px solid var(--gold);padding:8px 13px}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 7%}.gallery img{width:100%;height:360px;object-fit:cover}.contact a{color:var(--gold);display:block;margin:12px 0}footer{text-align:center;padding:35px;border-top:1px solid #333}
-@media(max-width:700px){.gallery{grid-template-columns:1fr}.gallery img{height:300px}}
+/* =========================
+   ESTILO GENERAL
+========================= */
 
-/* Galería de tatuajes */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  padding: 40px 20px;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background: #0d0d0d;
+  color: #f1e6d0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+  width: 100%;
+  min-height: 80px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #111111;
+  border-bottom: 1px solid #5b1830;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  display: block;
+  width: 95px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.brand {
+  margin-right: auto;
+  color: #f1e6d0;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+button {
+  padding: 10px 14px;
+  border: 1px solid #e34b35;
+  border-radius: 6px;
+  background: #e34b35;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  width: 100%;
+  min-height: 620px;
+  padding: 100px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #181818;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero > div {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 35px 25px;
+  background: rgba(0, 0, 0, 0.58);
+  border-radius: 10px;
+}
+
+.eyebrow {
+  color: #e34b35;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 20px 0;
+  color: #f1e6d0;
+  font-size: clamp(2.3rem, 8vw, 5rem);
+  line-height: 1.05;
+}
+
+h2 {
+  color: #e34b35;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+p {
+  font-size: 17px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 22px;
+  border-radius: 6px;
+  background: #e34b35;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+.about,
+.contact {
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 70px 25px;
+}
+
+.styles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.styles span {
+  padding: 10px 14px;
+  border: 1px solid #e34b35;
+  border-radius: 20px;
+  color: #f1e6d0;
+}
+
+/* =========================
+   GALERÍA
+========================= */
+
+.gallery {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 25px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  background: #0d0d0d;
 }
 
 .gallery img {
   display: block;
   width: 100%;
-  height: 280px;
+  height: 360px;
   object-fit: cover;
   border-radius: 10px;
-  border: 1px solid #444;
+  border: 1px solid #5b1830;
 }
 
-/* Logo */
-.logo {
+/* =========================
+   CONTACTO Y PIE DE PÁGINA
+========================= */
+
+.contact a {
   display: block;
-  width: 180px;
-  height: auto;
-  object-fit: contain;
+  margin: 12px 0;
+  color: #e34b35;
+  text-decoration: none;
 }
 
-/* En celulares, una foto por fila */
-@media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;
-    padding: 30px 20px;
-  }
+footer {
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  background: #090909;
+  color: #aaa;
+  font-size: 12px;
+}
 
-  .gallery img {
-    height: 260px;
+/* =========================
+   TELÉFONOS
+========================= */
+
+@media (max-width: 700px) {
+  header {
+    min-height: 70px;
+    padding: 10px 15px;
+    gap: 10px;
   }
 
   .logo {
-    width: 140px;
+    width: 70px;
+    height: 55px;
+  }
+
+  .brand {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .hero {
+    min-height: 520px;
+    padding: 70px 15px;
+  }
+
+  .hero > div {
+    padding: 25px 15px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 45px 15px;
+    gap: 18px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .about,
+  .contact {
+    padding: 50px 20px;
+  }
+
+  p {
+    font-size: 15px;
   }
 }
